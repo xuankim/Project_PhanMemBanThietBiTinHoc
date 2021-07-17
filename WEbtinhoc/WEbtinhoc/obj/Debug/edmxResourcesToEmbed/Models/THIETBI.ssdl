@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="THIETBIMOIModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="THIETBIMOIModelStoreContainer">
+    <EntitySet Name="cthd" EntityType="THIETBIMOIModel.Store.cthd" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ctpn" EntityType="THIETBIMOIModel.Store.ctpn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="hoadon" EntityType="THIETBIMOIModel.Store.hoadon" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="loai" EntityType="THIETBIMOIModel.Store.loai" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="nguoidung" EntityType="THIETBIMOIModel.Store.nguoidung" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="nhacc" EntityType="THIETBIMOIModel.Store.nhacc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="nhanvien" EntityType="THIETBIMOIModel.Store.nhanvien" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="phieunhap" EntityType="THIETBIMOIModel.Store.phieunhap" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sanpham" EntityType="THIETBIMOIModel.Store.sanpham" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="thuonghieu" EntityType="THIETBIMOIModel.Store.thuonghieu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tinhtrang" EntityType="THIETBIMOIModel.Store.tinhtrang" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vaitro" EntityType="THIETBIMOIModel.Store.vaitro" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="cthd_ibfk_1" Association="THIETBIMOIModel.Store.cthd_ibfk_1">
+      <End Role="hoadon" EntitySet="hoadon" />
+      <End Role="cthd" EntitySet="cthd" />
+    </AssociationSet>
+    <AssociationSet Name="cthd_ibfk_2" Association="THIETBIMOIModel.Store.cthd_ibfk_2">
+      <End Role="sanpham" EntitySet="sanpham" />
+      <End Role="cthd" EntitySet="cthd" />
+    </AssociationSet>
+    <AssociationSet Name="ctpn_ibfk_1" Association="THIETBIMOIModel.Store.ctpn_ibfk_1">
+      <End Role="phieunhap" EntitySet="phieunhap" />
+      <End Role="ctpn" EntitySet="ctpn" />
+    </AssociationSet>
+    <AssociationSet Name="ctpn_ibfk_2" Association="THIETBIMOIModel.Store.ctpn_ibfk_2">
+      <End Role="sanpham" EntitySet="sanpham" />
+      <End Role="ctpn" EntitySet="ctpn" />
+    </AssociationSet>
+    <AssociationSet Name="hoadon_ibfk_1" Association="THIETBIMOIModel.Store.hoadon_ibfk_1">
+      <End Role="nguoidung" EntitySet="nguoidung" />
+      <End Role="hoadon" EntitySet="hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="nguoidung_ibfk_1" Association="THIETBIMOIModel.Store.nguoidung_ibfk_1">
+      <End Role="vaitro" EntitySet="vaitro" />
+      <End Role="nguoidung" EntitySet="nguoidung" />
+    </AssociationSet>
+    <AssociationSet Name="nhanvien_ibfk_1" Association="THIETBIMOIModel.Store.nhanvien_ibfk_1">
+      <End Role="nguoidung" EntitySet="nguoidung" />
+      <End Role="nhanvien" EntitySet="nhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="phieunhap_ibfk_1" Association="THIETBIMOIModel.Store.phieunhap_ibfk_1">
+      <End Role="nhacc" EntitySet="nhacc" />
+      <End Role="phieunhap" EntitySet="phieunhap" />
+    </AssociationSet>
+    <AssociationSet Name="phieunhap_ibfk_2" Association="THIETBIMOIModel.Store.phieunhap_ibfk_2">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="phieunhap" EntitySet="phieunhap" />
+    </AssociationSet>
+    <AssociationSet Name="sanpham_ibfk_3" Association="THIETBIMOIModel.Store.sanpham_ibfk_3">
+      <End Role="tinhtrang" EntitySet="tinhtrang" />
+      <End Role="sanpham" EntitySet="sanpham" />
+    </AssociationSet>
+    <AssociationSet Name="sanpham_ibfk_4" Association="THIETBIMOIModel.Store.sanpham_ibfk_4">
+      <End Role="loai" EntitySet="loai" />
+      <End Role="sanpham" EntitySet="sanpham" />
+    </AssociationSet>
+    <AssociationSet Name="sanpham_ibfk_5" Association="THIETBIMOIModel.Store.sanpham_ibfk_5">
+      <End Role="thuonghieu" EntitySet="thuonghieu" />
+      <End Role="sanpham" EntitySet="sanpham" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cthd">
+    <Key>
+      <PropertyRef Name="IDHD" />
+      <PropertyRef Name="IDSP" />
+    </Key>
+    <Property Name="IDHD" Type="int" Nullable="false" />
+    <Property Name="IDSP" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="SOLUONG" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ctpn">
+    <Key>
+      <PropertyRef Name="IDPN" />
+      <PropertyRef Name="IDSP" />
+    </Key>
+    <Property Name="IDPN" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="IDSP" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="SLNHAP" Type="int" Nullable="false" />
+    <Property Name="DONGIANHAP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hoadon">
+    <Key>
+      <PropertyRef Name="IDHD" />
+    </Key>
+    <Property Name="IDHD" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDUSER" Type="int" Nullable="false" />
+    <Property Name="NGAYLAP" Type="datetime" Nullable="false" />
+    <Property Name="GHICHU" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="IDNV" Type="nvarchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="loai">
+    <Key>
+      <PropertyRef Name="IDLOAI" />
+    </Key>
+    <Property Name="IDLOAI" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TENLOAI" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="nguoidung">
+    <Key>
+      <PropertyRef Name="IDUSER" />
+    </Key>
+    <Property Name="IDUSER" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDVAITRO" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="HOTEN" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DIENTHOAI" Type="nvarchar" Nullable="false" MaxLength="11" />
+    <Property Name="DIACHI" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MK" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="GIOITINH" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AVATAR" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="nhacc">
+    <Key>
+      <PropertyRef Name="IDNCC" />
+    </Key>
+    <Property Name="IDNCC" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TENNCC" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="nhanvien">
+    <Key>
+      <PropertyRef Name="IDNV" />
+    </Key>
+    <Property Name="IDNV" Type="int" Nullable="false" />
+    <Property Name="HSL" Type="int" Nullable="false" />
+    <Property Name="TINHTRANG" Type="nvarchar" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="phieunhap">
+    <Key>
+      <PropertyRef Name="IDPN" />
+    </Key>
+    <Property Name="IDPN" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="IDNV" Type="int" Nullable="false" />
+    <Property Name="IDNCC" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="NGAYNHAP" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sanpham">
+    <Key>
+      <PropertyRef Name="IDSP" />
+    </Key>
+    <Property Name="IDSP" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="IDTHUONGHIEU" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="IDLOAI" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TENSP" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ANHSP" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="GIATIEN" Type="int" Nullable="false" />
+    <Property Name="DONVITINH" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SLTON" Type="int" Nullable="false" />
+    <Property Name="IDTINHTRANG" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="THOIHANBH" Type="int" Nullable="false" />
+    <Property Name="MOTA" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="thuonghieu">
+    <Key>
+      <PropertyRef Name="IDTHUONGHIEU" />
+    </Key>
+    <Property Name="IDTHUONGHIEU" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TENTHUONGHIEU" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tinhtrang">
+    <Key>
+      <PropertyRef Name="IDTINHTRANG" />
+    </Key>
+    <Property Name="IDTINHTRANG" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TENTINHTRANG" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="vaitro">
+    <Key>
+      <PropertyRef Name="IDVAITRO" />
+    </Key>
+    <Property Name="IDVAITRO" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="TENVAITRO" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="DANGNHAP" Type="bit" Nullable="false" />
+    <Property Name="HOADON" Type="bit" Nullable="false" />
+    <Property Name="NGUOIDUNG" Type="bit" Nullable="false" />
+    <Property Name="SANPHAM" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="cthd_ibfk_1">
+    <End Role="hoadon" Type="THIETBIMOIModel.Store.hoadon" Multiplicity="1" />
+    <End Role="cthd" Type="THIETBIMOIModel.Store.cthd" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hoadon">
+        <PropertyRef Name="IDHD" />
+      </Principal>
+      <Dependent Role="cthd">
+        <PropertyRef Name="IDHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cthd_ibfk_2">
+    <End Role="sanpham" Type="THIETBIMOIModel.Store.sanpham" Multiplicity="1" />
+    <End Role="cthd" Type="THIETBIMOIModel.Store.cthd" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanpham">
+        <PropertyRef Name="IDSP" />
+      </Principal>
+      <Dependent Role="cthd">
+        <PropertyRef Name="IDSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ctpn_ibfk_1">
+    <End Role="phieunhap" Type="THIETBIMOIModel.Store.phieunhap" Multiplicity="1" />
+    <End Role="ctpn" Type="THIETBIMOIModel.Store.ctpn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phieunhap">
+        <PropertyRef Name="IDPN" />
+      </Principal>
+      <Dependent Role="ctpn">
+        <PropertyRef Name="IDPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ctpn_ibfk_2">
+    <End Role="sanpham" Type="THIETBIMOIModel.Store.sanpham" Multiplicity="1" />
+    <End Role="ctpn" Type="THIETBIMOIModel.Store.ctpn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanpham">
+        <PropertyRef Name="IDSP" />
+      </Principal>
+      <Dependent Role="ctpn">
+        <PropertyRef Name="IDSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="hoadon_ibfk_1">
+    <End Role="nguoidung" Type="THIETBIMOIModel.Store.nguoidung" Multiplicity="1" />
+    <End Role="hoadon" Type="THIETBIMOIModel.Store.hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nguoidung">
+        <PropertyRef Name="IDUSER" />
+      </Principal>
+      <Dependent Role="hoadon">
+        <PropertyRef Name="IDUSER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="nguoidung_ibfk_1">
+    <End Role="vaitro" Type="THIETBIMOIModel.Store.vaitro" Multiplicity="1" />
+    <End Role="nguoidung" Type="THIETBIMOIModel.Store.nguoidung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vaitro">
+        <PropertyRef Name="IDVAITRO" />
+      </Principal>
+      <Dependent Role="nguoidung">
+        <PropertyRef Name="IDVAITRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="nhanvien_ibfk_1">
+    <End Role="nguoidung" Type="THIETBIMOIModel.Store.nguoidung" Multiplicity="1" />
+    <End Role="nhanvien" Type="THIETBIMOIModel.Store.nhanvien" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="nguoidung">
+        <PropertyRef Name="IDUSER" />
+      </Principal>
+      <Dependent Role="nhanvien">
+        <PropertyRef Name="IDNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="phieunhap_ibfk_1">
+    <End Role="nhacc" Type="THIETBIMOIModel.Store.nhacc" Multiplicity="1" />
+    <End Role="phieunhap" Type="THIETBIMOIModel.Store.phieunhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhacc">
+        <PropertyRef Name="IDNCC" />
+      </Principal>
+      <Dependent Role="phieunhap">
+        <PropertyRef Name="IDNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="phieunhap_ibfk_2">
+    <End Role="nhanvien" Type="THIETBIMOIModel.Store.nhanvien" Multiplicity="1" />
+    <End Role="phieunhap" Type="THIETBIMOIModel.Store.phieunhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="IDNV" />
+      </Principal>
+      <Dependent Role="phieunhap">
+        <PropertyRef Name="IDNV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sanpham_ibfk_3">
+    <End Role="tinhtrang" Type="THIETBIMOIModel.Store.tinhtrang" Multiplicity="1" />
+    <End Role="sanpham" Type="THIETBIMOIModel.Store.sanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tinhtrang">
+        <PropertyRef Name="IDTINHTRANG" />
+      </Principal>
+      <Dependent Role="sanpham">
+        <PropertyRef Name="IDTINHTRANG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sanpham_ibfk_4">
+    <End Role="loai" Type="THIETBIMOIModel.Store.loai" Multiplicity="1" />
+    <End Role="sanpham" Type="THIETBIMOIModel.Store.sanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loai">
+        <PropertyRef Name="IDLOAI" />
+      </Principal>
+      <Dependent Role="sanpham">
+        <PropertyRef Name="IDLOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sanpham_ibfk_5">
+    <End Role="thuonghieu" Type="THIETBIMOIModel.Store.thuonghieu" Multiplicity="1" />
+    <End Role="sanpham" Type="THIETBIMOIModel.Store.sanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="thuonghieu">
+        <PropertyRef Name="IDTHUONGHIEU" />
+      </Principal>
+      <Dependent Role="sanpham">
+        <PropertyRef Name="IDTHUONGHIEU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,11 @@
+﻿@model WEbtinhoc.Models.loai
+@using WEbtinhoc.Models
+@{
+    Layout = null;
+}
+
+ @foreach (var loai in ViewBag.Loai)
+                    {
+      <option><a href="@Url.Action("Products","Product",new {loai = loai.IDLOAI })">@loai.TENLOAI</a></option>
+                        
+                    }

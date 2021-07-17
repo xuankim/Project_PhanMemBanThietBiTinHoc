@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="THIETBIMOIModelStoreContainer" CdmEntityContainer="THIETBIMOIEntities">
+    <EntitySetMapping Name="cthds">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.cthd">
+        <MappingFragment StoreEntitySet="cthd">
+          <ScalarProperty Name="IDHD" ColumnName="IDHD" />
+          <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ctpns">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.ctpn">
+        <MappingFragment StoreEntitySet="ctpn">
+          <ScalarProperty Name="IDPN" ColumnName="IDPN" />
+          <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+          <ScalarProperty Name="SLNHAP" ColumnName="SLNHAP" />
+          <ScalarProperty Name="DONGIANHAP" ColumnName="DONGIANHAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hoadons">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.hoadon">
+        <MappingFragment StoreEntitySet="hoadon">
+          <ScalarProperty Name="IDHD" ColumnName="IDHD" />
+          <ScalarProperty Name="IDUSER" ColumnName="IDUSER" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="IDNV" ColumnName="IDNV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loais">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.loai">
+        <MappingFragment StoreEntitySet="loai">
+          <ScalarProperty Name="IDLOAI" ColumnName="IDLOAI" />
+          <ScalarProperty Name="TENLOAI" ColumnName="TENLOAI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nguoidungs">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.nguoidung">
+        <MappingFragment StoreEntitySet="nguoidung">
+          <ScalarProperty Name="IDUSER" ColumnName="IDUSER" />
+          <ScalarProperty Name="IDVAITRO" ColumnName="IDVAITRO" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="DIENTHOAI" ColumnName="DIENTHOAI" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MK" ColumnName="MK" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="AVATAR" ColumnName="AVATAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nhaccs">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.nhacc">
+        <MappingFragment StoreEntitySet="nhacc">
+          <ScalarProperty Name="IDNCC" ColumnName="IDNCC" />
+          <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nhanviens">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.nhanvien">
+        <MappingFragment StoreEntitySet="nhanvien">
+          <ScalarProperty Name="IDNV" ColumnName="IDNV" />
+          <ScalarProperty Name="HSL" ColumnName="HSL" />
+          <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phieunhaps">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.phieunhap">
+        <MappingFragment StoreEntitySet="phieunhap">
+          <ScalarProperty Name="IDPN" ColumnName="IDPN" />
+          <ScalarProperty Name="IDNV" ColumnName="IDNV" />
+          <ScalarProperty Name="IDNCC" ColumnName="IDNCC" />
+          <ScalarProperty Name="NGAYNHAP" ColumnName="NGAYNHAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sanphams">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.sanpham">
+        <MappingFragment StoreEntitySet="sanpham">
+          <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+          <ScalarProperty Name="IDTHUONGHIEU" ColumnName="IDTHUONGHIEU" />
+          <ScalarProperty Name="IDLOAI" ColumnName="IDLOAI" />
+          <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+          <ScalarProperty Name="ANHSP" ColumnName="ANHSP" />
+          <ScalarProperty Name="GIATIEN" ColumnName="GIATIEN" />
+          <ScalarProperty Name="DONVITINH" ColumnName="DONVITINH" />
+          <ScalarProperty Name="SLTON" ColumnName="SLTON" />
+          <ScalarProperty Name="IDTINHTRANG" ColumnName="IDTINHTRANG" />
+          <ScalarProperty Name="THOIHANBH" ColumnName="THOIHANBH" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="thuonghieux">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.thuonghieu">
+        <MappingFragment StoreEntitySet="thuonghieu">
+          <ScalarProperty Name="IDTHUONGHIEU" ColumnName="IDTHUONGHIEU" />
+          <ScalarProperty Name="TENTHUONGHIEU" ColumnName="TENTHUONGHIEU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tinhtrangs">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.tinhtrang">
+        <MappingFragment StoreEntitySet="tinhtrang">
+          <ScalarProperty Name="IDTINHTRANG" ColumnName="IDTINHTRANG" />
+          <ScalarProperty Name="TENTINHTRANG" ColumnName="TENTINHTRANG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vaitroes">
+      <EntityTypeMapping TypeName="THIETBIMOIModel.vaitro">
+        <MappingFragment StoreEntitySet="vaitro">
+          <ScalarProperty Name="IDVAITRO" ColumnName="IDVAITRO" />
+          <ScalarProperty Name="TENVAITRO" ColumnName="TENVAITRO" />
+          <ScalarProperty Name="DANGNHAP" ColumnName="DANGNHAP" />
+          <ScalarProperty Name="HOADON" ColumnName="HOADON" />
+          <ScalarProperty Name="NGUOIDUNG" ColumnName="NGUOIDUNG" />
+          <ScalarProperty Name="SANPHAM" ColumnName="SANPHAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

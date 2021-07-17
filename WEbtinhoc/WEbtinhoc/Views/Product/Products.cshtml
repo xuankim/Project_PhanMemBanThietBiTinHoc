@@ -1,0 +1,60 @@
+﻿@model List<WEbtinhoc.Models.sanpham>
+@{
+    ViewBag.Title = ViewBag.Name;
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+	<!-- product left -->
+				<div class="agileinfo-ads-display col-lg-9">
+					<div class="wrapper">
+						<!-- first section -->
+						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+							<h3 class="heading-tittle text-center font-italic">New Brand Mobiles</h3>
+							<div class="row">
+                                 @foreach(var item in Model){
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+											<img  src="@item.ANHSP" alt="" style="width:200px;height:200px;"  />
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="@Url.Action("Detail","Product",new {id = item.IDSP })" class="link-product-add-cart">Quick View</a>
+												</div>
+											</div>
+										</div>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+												<a href="single.html">@item.TENSP</a>
+											</h4>
+											<div class="info-product-price my-2">
+												<span class="item_price">@string.Format("{0:N0}", item.GIATIEN) @item.DONVITINH</span>
+												<del>$280.00</del>
+											</div>
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="#" method="post">
+													<fieldset>
+														<input type="hidden" name="cmd" value="_cart" />
+														<input type="hidden" name="add" value="1" />
+														<input type="hidden" name="business" value=" " />
+														<input type="hidden" name="item_name" value="Samsung Galaxy J7" />
+														<input type="hidden" name="amount" value="200.00" />
+														<input type="hidden" name="discount_amount" value="1.00" />
+														<input type="hidden" name="currency_code" value="USD" />
+														<input type="hidden" name="return" value=" " />
+														<input type="hidden" name="cancel_return" value=" " />
+														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+                                 }
+
+								
+						<!-- //fourth section -->
+					</div>
+				</div>
+                        </div>
+                    </div>
+				<!-- //product left -->

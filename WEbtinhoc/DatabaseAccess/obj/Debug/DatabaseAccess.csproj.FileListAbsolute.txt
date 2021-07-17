@@ -1,0 +1,8 @@
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\bin\Debug\DatabaseAccess.dll
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\bin\Debug\EntityFramework.dll
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\bin\Debug\EntityFramework.xml
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\obj\Debug\DatabaseAccess.csprojResolveAssemblyReference.cache
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\obj\Debug\DatabaseAccess.dll
+D:\Doanthongminh\WEbtinhoc\DatabaseAccess\obj\Debug\DatabaseAccess.pdb

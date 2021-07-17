@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82FE8A66-EA41-448E-B8A6-B3DFA959A6C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DatabaseAccess</RootNamespace>
+    <AssemblyName>DatabaseAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cthd.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ctpn.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hoadon.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="loai.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nguoidung.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhacc.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhanvien.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="phieunhap.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sanpham.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THIETBI.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THIETBI.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THIETBI.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THIETBI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THIETBI.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="thuonghieu.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tinhtrang.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vaitro.cs">
+      <DependentUpon>THIETBI.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="THIETBI.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>THIETBI.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="THIETBI.edmx.diagram">
+      <DependentUpon>THIETBI.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="THIETBI.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>THIETBI.edmx</DependentUpon>
+      <LastGenOutput>THIETBI.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="THIETBI.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>THIETBI.edmx</DependentUpon>
+      <LastGenOutput>THIETBI.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
